@@ -3,9 +3,7 @@ import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import '@/src/styles/default.css';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
-import NextNprogress from 'nextjs-progressbar';
 
-import 'nprogress/nprogress.css';
 
 const theme = extendTheme({
   colors: {
@@ -30,7 +28,6 @@ const TrelloApp = ({ Component, pageProps }) => {
         <title>Trello clone</title>
         <link rel="shortcut icon" href="/trello-icon.svg"></link>
       </Head>
-      <NextNprogress color="#0079bf" startPosition={0.3} stopDelayMs={200} height={4} />
       <ChakraProvider theme={theme}>
         <Component {...pageProps} />
       </ChakraProvider>
